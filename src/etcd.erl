@@ -160,7 +160,7 @@ encode_params(Pairs) ->
 
 %% @private
 url_prefix(Url) ->
-    Url ++ "/v1".
+    Url ++ "/v2".
 
 %% @private
 post_request(Url, Pairs, Timeout) ->
