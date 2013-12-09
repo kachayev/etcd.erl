@@ -185,11 +185,11 @@ parse_response(Decoded) when is_tuple(Decoded) ->
 parse_response_inner(Pairs) ->
     {_, Action} = lists:keyfind(<<"action">>, 1, Pairs),
     case Action of
-        <<"SET">> ->
+        <<"set">> ->
             parse_set_response(Pairs, #set{});
-        <<"GET">> ->
+        <<"get">> ->
             parse_get_response(Pairs, #get{});
-        <<"DELETE">> ->
+        <<"delete">> ->
             parse_delete_response(Pairs, #delete{})
     end.
 
